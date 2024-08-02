@@ -1,0 +1,1 @@
+-- Repositório que contem projetos e treinos voltados a linguagem C
