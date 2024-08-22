@@ -46,6 +46,7 @@ int search(int vet[], int elem, int n){ // busca elemento no vetor. Retorna o in
     printf("Não está dentro do vetor");
 }
 
+//Só falta o Remove
 
 int main(int argc, char const *argv[]) {
     int vetor[MAX];
