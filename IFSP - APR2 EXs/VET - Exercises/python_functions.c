@@ -26,7 +26,7 @@ int len(int vet[]) {
     return (sizeof(vet)/4)-1;
 }
 
-int insert(int vet[], int posi, int elem) { // adiciona elemento em uma posicao valida do vetor
+int update(int vet[], int posi, int elem) { // adiciona elemento em uma posicao valida do vetor
     if (posi > MAX - 1 || posi < 0) {
         printf("Posição inválida\n");
         return;
