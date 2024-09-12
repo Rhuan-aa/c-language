@@ -5,25 +5,10 @@ o modelo abaixo apresentado no final do exercício, modificando apenas o process
 #include <stdio.h>
 #include <stdlib.h>
 
-int maior_3_numeros (int x, int y, int z){
-    if (x > y && x > z){
-        return x;
-    } if (y > z){
-        return y;
-    } 
-    return z;
-}
+#include <stdio.h>
 
-int maior_2_numeros(int x, int y){
-    if (x > y){
-        return x;
-    }
-    return y;
-}
-
-int main(int argc, char const *argv[])
-{
-    int num_1, num_2, num_3;
+int main() {
+    int num_1, num_2, num_3, temp;
 
     printf("Digite o valor do primeiro numero: ");
     scanf("%d", &num_1);
@@ -32,25 +17,24 @@ int main(int argc, char const *argv[])
     printf("Digite o valor do terceiro numero: ");
     scanf("%d", &num_3);
 
-    if (maior_3_numeros(num_1, num_2, num_3) == num_1){
-        if (maior_2_numeros(num_2, num_3) == num_2){
-            printf("%d, %d, %d\n", num_3, num_2, num_1);
-        } else {
-            printf("%d, %d, %d\n", num_2, num_3, num_1);
-        }
-    } else if (maior_3_numeros(num_1, num_2, num_3) == num_2){
-        if (maior_2_numeros(num_1, num_3) == num_1){
-            printf("%d, %d, %d\n", num_3, num_1, num_2);
-        } else {
-            printf("%d, %d, %d\n", num_1, num_3, num_2);
-        }
-    } else {
-        if (maior_2_numeros(num_1, num_2) == num_1){
-            printf("%d, %d, %d\n", num_2, num_1, num_3);
-        } else {
-            printf("%d, %d, %d\n", num_1, num_2, num_3);
-        }
+    if (num_1 > num_2) {
+        temp = num_1;
+        num_1 = num_2;
+        num_2 = temp;
     }
+    if (num_1 > num_3) {
+        temp = num_1;
+        num_1 = num_3;
+        num_3 = temp;
+    }
+    if (num_2 > num_3) {
+        temp = num_2;
+        num_2 = num_3;
+        num_3 = temp;
+    }
+
+    // Impressão dos valores em ordem crescente
+    printf("%d, %d, %d\n", num_1, num_2, num_3);
 
     return 0;
 }
