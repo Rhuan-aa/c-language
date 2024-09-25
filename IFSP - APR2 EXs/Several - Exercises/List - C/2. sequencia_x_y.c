@@ -10,8 +10,10 @@ void sequencia(int num, int num2){
         for (int i = num; i <= num2; i++) { 
             printf("%d\n", i);
         }
+    } else {
+        printf("INVALIDO");
     }
-    printf("INVALIDO");
+    
 }
 
 
