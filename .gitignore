@@ -1,4 +1,5 @@
 *.exe
-.vscode
+.vscode/
 output
 output/
+IFSP - Studies/
